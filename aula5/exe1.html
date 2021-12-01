@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio complementar</title>
+</head>
+<body>
+    <div>
+        <label for="ano-actual">
+            <input type="text" id="ano-actual" placeholder="informe o ano actual" />
+        </label>
+
+        <label for="ano-nasc">
+            <input type="text" id="ano-nasc" placeholder="informe o ano de nascimento" />
+        </label>
+
+        <button onclick="qualAIdade()">Verificar Idade</button>
+    </div>
+
+    <span id="idade"></span>
+
+    <script>
+
+        function qualAIdade() {
+
+            let ano_actual = document.getElementById('ano-actual').value
+            let ano_nasc = document.getElementById('ano-nasc').value
+
+            console.log(ano_actual, ano_nasc)
+
+            let idade = ano_actual - ano_nasc 
+
+            document.getElementById('idade').innerHTML = idade
+        }
+    </script>
+    
+</body>
+</html>

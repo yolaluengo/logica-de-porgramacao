@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Qual é o maior</title>
+</head>
+
+<body>
+
+    <span id="msg"></span>
+    <script>
+        let contador = 1
+        let soma = 0
+        let maior = 0
+        while (contador <= 5) {
+            let valor = parseInt(prompt('Informe um valor'))
+
+            if (valor => maior) {
+                maior = valor
+            }
+
+            soma = soma + valor
+            contador = contador + 1
+            console.log(valor, contador)
+        }
+        document.getElementById('msg').innerHTML = `A soma é: ${soma}, e o maior número é: ${maior}`
+        console.log(soma)
+    </script>
+</body>
+
+</html>

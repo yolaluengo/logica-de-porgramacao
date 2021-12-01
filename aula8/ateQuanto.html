@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digite quanto quer contar</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="n1" />
+        <button onclick="contar()">contar</button>
+    </div>
+    <br />
+
+    <div class="msg"></div>
+
+
+    <script>
+        let contador = 0
+
+        function contar() {
+            let n1 = parseInt(document.getElementById('n1').value)
+
+            while (contador <= n1) {
+                let span = document.createElement('span')
+                span.innerHTML = `<br /><br />: ${contador}`
+                contador = contador + 1
+
+                let div = document.querySelector('.msg')
+                document.body.insertBefore(span, div)
+            }
+        }
+    </script>
+</body>
+
+</html>

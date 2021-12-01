@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>IMC</title>
+</head>
+<body>
+    <div>
+        <labe>Informe sua Massa (kg):</label>
+       <input type="text" id="massa" />
+       <br/>
+       <label>Informe sua altura (m):</label>
+       <input type="text" id="altura" />
+
+       <button type="submit" onclick="imc()">Calcular IMC</button>
+
+       <span id="msg"></span>
+    </div>
+
+    <script>
+        function imc(){
+            let massa = document.getElementById('massa').value 
+            let altura = document.getElementById('altura').value 
+            
+            console.log(massa, altura)
+
+            let imc = massa/ (altura ** 2)
+
+            if ( (imc >= 18.5) && (imc < 24.9) ) {
+
+                document.getElementById('msg').innerHTML = `
+                   Seu imc é de :${imc.toFixed(2)}, Parabéns seu  peso é o ideal
+                   `
+            }else {
+                document.getElementById('msg').innerHTML =`
+                   Seu imc é de: ${imc.toFixed(2)}, vocé não está no peso ideal
+                   `
+            }
+        }
+    </script>
+</body>
+</html>

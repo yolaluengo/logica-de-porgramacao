@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt- br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio2 complementar</title>
+</head>
+<body>
+    <div>
+        <label for="real">
+            <input type="text" id="real" placeholder="informe o quanto reais vocé tem?" />
+        </label>
+        <button onclick="converter()">Converter Moeda</button>
+    </div>
+    <span id="moeda"></span>
+
+    <script>
+
+        function converter() {
+
+            let real = document.getElementById('real').value
+
+            console.log(real)
+
+            let moeda = real * 5.90
+
+            console.log(moeda)
+
+            document.getElementById('moeda').innerHTML =moeda
+
+        }
+    </script>
+    
+</body>
+</html>

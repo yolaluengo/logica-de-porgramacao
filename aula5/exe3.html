@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio3 complementar</title>
+</head>
+<body>
+    <div>
+        <label for="temp">
+            <input type="text" id="temp" placeholder="informe a temperatura" />
+        </label>
+        <button onclick="converter()">Converter</button>
+    </div>
+    <span id="temperatura"></span>
+
+    <script>
+
+        function converter() {
+
+            let f = document.getElementById('temp').value
+
+            console.log(f)
+
+             let c = (f - 32) / 1.8
+
+             console.log(c)
+
+             document.getElementById('temperatura').innerHTML = c
+        }
+    </script>
+    
+</body>
+</html>

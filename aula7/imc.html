@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Imc</title>
+</head>
+
+<body>
+    <div>
+        <label>Informe sua massa (kg)</label>
+        <input type="text" id="massa" />
+        <br /><br />
+        <label>Informe sua altura (m)</label>
+        <input type="text" id="altura" />
+
+        <button type="submit" onclick="calcularImc()">Verificar IMC</button>
+        <br />
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        function calcularImc() {
+            let massa = document.getElementById('massa').value
+            let altura = document.getElementById('altura').value
+
+            console.log(massa, altura)
+
+            let imc = massa / (altura ** 2)
+
+            if (imc < 17) {
+                document.getElementById('msg').innerHTML = "MuitaAbaixo do peso"
+            } else if ((imc >= 17) && (imc < 18.5)) {
+                document.getElementById('msg').innerHTML = "Abaixo do peso"
+            } else if ((imc >= 18.5) && (imc < 25)) {
+                document.getElementById('msg').innerHTML = "Peso Ideal"
+            } else if ((imc > +25) && (imc < 30)) {
+                document.getElementById('msg').innerHTML = "Sobrepeso"
+            } else if ((imc >= 30) && (imc < 35)) {
+                document.getElementById('msg').innerHTML = "Obesidad"
+            } else if ((imc >= 30) && (imc < 40)) {
+                document.getElementById('msg').innerHTML = "Obesidad Servera"
+            } else {
+                document.getElementById('msg').innerHTML = "Obesidad Morbida"
+            }
+        }
+    </script>
+</body>
+
+</html>

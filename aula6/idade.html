@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Qual é a sua idade</title>
+</head>
+<body>
+    <div>
+
+        <label>Em que ano estamos</label>
+        <input type="text" id="ano-actual" />
+        <br/>
+
+        <label>Em que ano vocé nasceu</label>
+        <input type="text" id="ano-nasc" />
+
+        <button type="submit" onclick="calcularIdade()">Qual é minha idade</button>
+        <br/>
+
+        <span id="msg"></span>
+
+    </div>
+
+    <script>
+
+        function calcularIdade() {
+            let anoActual = document.getElementById('ano-actual').value 
+            let anoNasc = document.getElementById('ano-nasc').value 
+
+            console.log(anoActual, anoNasc)
+
+            let suaIdade = anoActual - anoNasc
+            
+            document.getElementById('msg').innerHTML = suaIdade
+
+            // se
+            if( suaIdade >= 43 ) {
+                document.getElementById('msg').innerHTML = `
+                    Parabéns vocé atingiu a sua maioridade
+                    com ${suaIdade}
+                `
+            }else {
+                document.getElementById('msg').innerHTML = `
+                    Vocé não atingiu sua maioriadade
+                    com ${suaIdade}`
+            }
+        }
+    </script>
+    
+</body>
+</html>

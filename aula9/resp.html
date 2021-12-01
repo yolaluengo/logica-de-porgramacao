@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Respota</title>
+</head>
+
+<body>
+    <span id="msg"></span>
+
+    <script>
+        let soma = 0
+        let resposta = 's'
+
+        while (resposta == 's') {
+
+            let valor = parseInt(prompt('Informe o valor'))
+
+            soma = soma + valor
+            resposta = prompt('Desaja continuar {s/n}')
+        }
+
+        document.getElementById('msg').innerHTML = `A soma é: ${soma}`
+    </script>
+</body>
+
+</html>

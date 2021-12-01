@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio4 complementar</title>
+</head>
+<body>
+    <div>
+        <label for="preco">
+            <input type="text" id="preco" placeholder="informe o valor da mercaduria" />
+        </label>
+        <button onclick="converter()">Caicular imposto</button>
+    </div>
+
+    <span id="imposto"></span>
+
+    <script>
+
+        function converter() {
+
+            let preco = document.getElementById('preco').value 
+
+            console.log(preco)
+
+            let imposto = (preco * 60) /  100
+
+            console.log(imposto)
+
+            document.getElementById('imposto').innerHTML = imposto.toFixed(2)
+        }
+    </script>
+    
+</body>
+</html>

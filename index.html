@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Logica de Programaçao</title>
+</head>
+<body>
+    <input type="text" nome="valorA" id="valorA" placeholder="informe o valor A" />
+    <input type="text" nome="valorB" id="valorA" placeholder="informe o valor B" />
+    <input type="text" nome="valorC" id="valorA" placeholder="informe o valor C" />
+    <button onclick="equacao()">Calcular</button>
+
+
+    <script>
+
+        function equacao() {
+            event.preventDefault()
+            let valorA = document.getElementById('valorA').value
+            let valorB = document.getElementById('valorB').value
+            let valorC = document.getElementById('valorC').value
+
+            let delta = parseFloat((valorB * valorB) - 4 * valorA * valorC)
+
+            document.write(' Sua équação é: ${valorA}x2 + ${valorB} x + ${valorC} = 0' )
+            document.write('</br>')
+
+            document.write('0 valor de delta: ${delta} ')
+
+            console.log(delta)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soma entre eles</title>
+</head>
+
+<body>
+    <span id="msg"></span>
+    <script>
+        let contador = 1
+        let soma = 0
+        while (contador <= 5) {
+            let valor = parseInt(prompt('Informe um valor'))
+            soma = soma + valor
+            contador = contador + 1
+            console.log(valor, contador)
+
+        }
+        document.getElementById('msg').innerHTML = soma
+        console.log(soma)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercico5 complementar</title>
+</head>
+<body>
+    <div>
+        <label for="valor">
+            <input type="text" id="valor" placeholder="digite o valor" />
+        </label>
+        <label for="parcelas">
+            <input type="text" id="parcelas" placeholder="digitelas paecelas"/>
+        </label>
+        <button onclick="calcular()">calcular</button>
+    </div>
+    <span id="resultado"></span>
+
+
+    <script>
+
+        function calcular(){
+            let valor = document.getElementById(valor).value 
+            let parcelas = document.getElementById(parcelas).value 
+
+            console.log(valor - parcelas)
+
+            let resultado =(val * 20) / 10
+
+            document.getElementById('resultado').innerHTML `
+              O valor ${resultado} 
+              `
+
+        }
+    </script>
+    
+</body>
+</html>
